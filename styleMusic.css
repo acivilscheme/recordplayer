@@ -1,0 +1,161 @@
+body{
+    background-color: #505050;
+    font-size: 1.4em;
+    font-family: 'Germania One', serif;
+}
+
+h4{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #505050;
+}
+
+.bgPic{
+    background-size: 25%;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #505050;
+    background-image: url("images/drake.png");
+    background-repeat: no-repeat;
+    background-position: 25% 75%;
+    overflow: hidden;
+}
+
+.card{
+    border: 2px solid #dcdcdc;
+    background-color: #dcdcdc; 
+    border-radius: 0px; 
+    overflow: auto;
+}
+
+#turntable, #turntableArmContainer, #vinylHolder, #turntableArm, #turntableArmContainer, #armClickPoint{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#turntable, #turntableArmContainer{
+    width: 200px;
+    height: 200px;
+}
+#turntable{
+    display: inline-block; 
+    position: relative; 
+    padding: 5px;
+
+    background-image: url("images/turntableFinal.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #cecece;
+
+    border: 1x solid red;
+}
+#vinylHolder{
+    border-radius: 50%;
+    animation-name: rotateVinyl;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    border: 0px solid white;
+}
+#vinylHolder img{
+    max-width: 100%;
+    height: auto;
+    border-radius: inherit;
+    filter: grayscale(75%);
+}
+#turntableArm img{
+    max-height: 200px;
+    width: auto;
+}
+#turntableArmContainer{
+    max-width: 25%;
+
+    position: absolute;
+    margin-top: -195px; 
+    margin-left: 190px;
+    background-color: #cecece;
+
+    border: 0px solid green;
+}
+#turntableArm{
+    transform-origin: 50% 15%;
+    
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    z-index: 12;
+
+    border: 0px solid yellow;
+}
+#armClickPoint{
+    height: 60px; 
+    width: 20px; 
+    position: absolute; 
+    bottom: 0px; 
+    right: 12px;
+
+    border: 0px solid purple;
+}
+#armClickPoint:hover{
+    cursor: pointer;
+}
+
+@keyframes rotateVinyl {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#vinylDeck .col-6{
+    background-color: #dcdcdc;
+}
+.album{
+    display: inline-block; 
+    position: relative; 
+
+    max-height: 200px;
+    max-width: 200px;
+
+    filter: grayscale(75%);
+
+    border: 0px solid red;
+}
+.album img{
+    width: 100%;
+    height: auto;
+}
+.album .cover{
+    position: absolute;
+    z-index: 10;
+}
+.album .cover:hover, .album .vinyl:hover{
+    cursor: pointer;
+}
+.album .vinyl{
+    top: auto;
+    left: auto;
+    border-radius: 50%;
+
+    border: 0px solid blue;
+}
+.album .vinyl img{
+    border-radius: inherit;
+}
+
+.album figcaption{
+    font-size: 1em;
+    height: 25px; 
+    line-height: 25px; 
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #505050;
+}

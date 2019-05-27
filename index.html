@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nick Drake | Music</title>
+
+    <!-- [Bootstrap] Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- [Bootstrap] needs to be before other styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900i" rel="stylesheet">
+    <link rel="stylesheet" href="styleMusic.css">
+</head>
+<body style="position: relative;">
+    <div class="container-fluid text-center p-0 bgPic" style="border: 0px solid white; ">
+        <div class="row h-50 w-100 align-items-center justify-content-end" style="border: 0px solid yellow;">
+            <div class="col-4 h-75 mt-2"  style="border: 0px solid purple; right: 20%;">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Discography</h4>
+                        <!-- <h6 class="card-subtitle mb-2 text-muted">subtitle</h6> -->
+                        <p class="card-text text-left" style="font-size: .9em; text-indent: 25px;">The discography of Nick Drake, an English folk musician and singer-songwriter, consists of three studio albums. Drake released his debut studio album, Five Leaves Left, in July 1969 and received poor marketing from Island and mixed reviews from critics.  In March 1971, Drake released his second studio album, Bryter Layter, which featured a more up-tempo and jazz influenced sound. In October 1971, Drake began recording sessions with a new producer, John Wood. Recorded at two midnight sessions at Sound Techniques in London, the sessions resulted in Drake's third and final studio album, Pink Moon. It was released in February 1972 and despite poor sales, Pink Moon received positive critical acclaim. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row h-50 align-items-end justify-content-end" style="border: 0px solid red;">
+            <div class="col-4 p-4" style="border: 0px solid blue;">
+                <audio id="audioFile">
+                    <source src="" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="py-4 pr-4 pl-0" style="border: 0px solid blue; max-width: 75%; background-color: #dcdcdc;">
+                    <figure id="turntable" style="border: 0px solid green;">
+                        <div id="vinylHolder">
+                            <img src="images/turntableTemp.png"/>
+                        </div>
+                        <div id="turntableArmContainer">
+                            <div id="turntableArm">
+                                <img src="images/armFinal.png"/>
+                                <div id="armClickPoint">
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid w-25 ml-5 my-1 text-center" id="vinylDeck" style="position: absolute; bottom: 0px; top: 0px; border: 0px solid green;">
+        <div class="row p-2" style="border: 0px solid red;">
+            <div class="col-6 p-3" style="border: 0px solid green;">
+                <figure class="album" style="border: 0px solid green;">
+                    <div class="cover">
+                        <img class="img-fluid" src="images/albums/leavesCover.jpg" />
+                    </div>
+                    <div id="vinyl1" class="vinyl vinylPeak">
+                        <img class="img-fluid" src="images/albums/leavesVinyl.png"/>
+                    </div>
+                    <div class="vinylPlaceholder">
+                        <img class="img-fluid" src="images/albums/leavesVinyl.png" />
+                    </div>
+                    <figcaption style="border: 0px solid green;">Five Leaves Left</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row p-2 justify-content-center" style="border: 0px solid red;">
+            <div class="col-6 p-3">
+                <figure class="album">
+                    <div class="cover">
+                        <img class="img-fluid" src="images/albums/bryterCover.jpg" />
+                    </div>
+                    <div id="vinyl2" class="vinyl vinylPeak">
+                        <img class="img-fluid" src="images/albums/bryterVinyl.png"/>
+                    </div>
+                    <div class="vinylPlaceholder">
+                        <img class="img-fluid" src="images/albums/bryterVinyl.png" />
+                    </div>
+                    <figcaption>Bryter Layter</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row p-2" style="border: 0px solid red;">
+            <div class="col-6 p-3">
+                <figure class="album">
+                    <div class="cover">
+                        <img class="img-fluid" src="images/albums/pinkCover.jpg" />
+                    </div>
+                    <div id="vinyl3" class="vinyl vinylPeak">
+                        <img class="img-fluid" src="images/albums/pinkVinyl.png"/>
+                    </div>
+                    <div class="vinylPlaceholder">
+                        <img class="img-fluid" src="images/albums/pinkVinyl.png" />
+                    </div>
+                    <figcaption>Pink Moon</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    
+<!-- [Bootstrap] javascript plugins, jquery and popper.js for bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.js"></script>
+<script type="text/javascript" src="musicScript.js"></script>
+
+</body>
+</html>
